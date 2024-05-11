@@ -7,6 +7,11 @@ import Mainpg from './Components/Mainpg'
 import SignUp from './Components/SignUp'
 import SignIn from './Components/SignIn'
 import Contacts from './Components/Contacts'
+import Navbar from './Components/Navbar'
+import Profile from './Components/Profile'
+import Add from './Components/Add'
+import Top from './Components/Top'
+import Map from './Components/Map'
 
 
 function App() {
@@ -19,6 +24,12 @@ function App() {
            <Route path='/SignUp' element={<SignUp/>}/>
            <Route path='/SignIn' element={<SignIn/>}/>
            <Route path='/Contacts' element={<Contacts/>}/>
+           <Route path='/Navbar' element={<Navbar/>}/>
+           <Route path='/Profile' element={<Profile/>}/>
+           <Route path='/Add' element={<Add/>}/>
+           <Route path='/Top' element={<Top/>}/>
+           <Route path='/Map' element={<Map/>}/>
+
     </Routes>
   )
 }

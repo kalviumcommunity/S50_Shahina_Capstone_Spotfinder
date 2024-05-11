@@ -10,10 +10,10 @@ function SignIn() {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [loading, setLoading] = useState(false);
 
-    const onSubmit = async (formData,e) => {
-        e.preventDefault();
+    const onSubmit = async (formData) => {
         setLoading(true);
         try {
+            console.log(formData)
             const response = await axios.post('http://localhost:3000/user/signin', formData);
             const { user, token } = response.data;
             if (user) {
