@@ -56,12 +56,7 @@ function Profile() {
 
                 <div className='  flex w-[20rem] h-[20rem] ml-4 '>
                   <img className='w-[rem] h-[rem]' src={post.Image} />
-                </div>
-
-
-
-
-        
+                </div>        
               </div>
             ))}
 
