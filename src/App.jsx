@@ -10,6 +10,8 @@ import Contacts from './Components/Contacts'
 import Navbar from './Components/Navbar'
 import Profile from './Components/Profile'
 import Add from './Components/Add'
+import Top from './Components/Top'
+import Map from './Components/Map'
 
 
 function App() {
@@ -25,6 +27,9 @@ function App() {
            <Route path='/Navbar' element={<Navbar/>}/>
            <Route path='/Profile' element={<Profile/>}/>
            <Route path='/Add' element={<Add/>}/>
+           <Route path='/Top' element={<Top/>}/>
+           <Route path='/Map' element={<Map/>}/>
+
     </Routes>
   )
 }

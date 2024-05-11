@@ -18,8 +18,12 @@ function Navbar() {
                             <Link to='/Mainpg'>
                             <li className='cursor-pointer  flex justify-center items-center ht  text-2xl font-josefin'> <img className="h-10 " src={website} alt="" /><h3 className="ml-3">Portal</h3></li>
                             </Link>
+                            <Link to='/Top'>
                             <li className='cursor-pointer  mt-14 flex justify-center items-center text-2xl   font-josefin'><img className="h-10 " src={trend} alt="" /><h3 className="ml-3">Top-Teir</h3></li>
+                            </Link>
+                            <Link to='/Map'>
                             <li className='cursor-pointer  mt-14 flex justify-center items-center text-2xl  font-josefin'><img className="h-10 " src={pin} alt="" /><h3 className="ml-3">Map</h3></li>
+                            </Link>
                         </ul>
                     </nav>
                 </div>

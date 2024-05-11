@@ -79,26 +79,26 @@ function Mainpg() {
 
 
         <div className=' w-4/5 ' >
-          <nav className=' flex justify-around text-center  items-center'>
-            <input type="text" placeholder='Search ' className='border-[2px] border-yellow-400 rounded-lg pl-2 w-[30rem] h-10' />
+          <nav className=' flex justify-around text-center   items-center'>
+            <input type="text" placeholder='Search ' className='border-[2px] mt-3 border-yellow-400 rounded-lg pl-2 w-[30rem] h-10' />
             <Link to='/Profile'>
               <div className=' w-[9rem] h-9 bg-yellow-400  rounded-lg  flex justify-center text-center cursor-pointer items-center ' ><img className='h-7 w-10 pl-3' src={user} alt="" /><h5 className=' text-white '>{username}</h5></div>
               {/* onClick={LogOut} */}
             </Link>
 
-            <div className='w-14 h-7 bg-yellow-400  rounded-full   '><div className='bg-white w-6 h-6 rounded-full border ml-0.5 mt-0.5'></div></div>
+            <div className='w-14 h-7 bg-yellow-400  rounded-full mt-3  '><div className='bg-white w-6 h-6 rounded-full border ml-0.5 mt-0.5'></div></div>
           </nav>
-          <div className=' h-[35rem] w-[53rem] overflow-auto ml-10  bigdiv '  >
-            {/* Modify this section */}
+          <div className=' h-[37rem] w-[53rem] overflow-auto ml-10  bigdiv '  >
+        
             {postdata.map((post, index) => (
-              <div className='w-[40rem] h-[53rem] mb-10 border-2 border mt-8 border-black shadow-lg rounded-lg' key={index}>
+              <div className='w-[40rem] h-[53rem] mb-10 border-2 border mt-8 border-yellow-300 shadow-lg rounded-lg' key={index}>
                 <div className='flex text-center items-center'>
                   <div className='bg-white w-[2rem] h-[2rem] ml-2 mt-2 rounded-full border-2'></div>
                   <h3 className='ml-3'>{post.UserName}</h3>
                 </div>
 
 
-                <div className='ml-10 border flex w-[35rem] h-[35rem] border-red-700 '>
+                <div className='ml-10 border flex w-[35rem] h-[35rem] '>
                   {/* <Slider {...settings}> */}
 
                   <img className='w-[35rem] h-[35rem]' src={post.Image} />
