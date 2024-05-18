@@ -7,9 +7,11 @@ export default {
   theme: {
     fontFamily: {
       josefin: "Josefin Sans",
+      sacramento: ['Sacramento', 'cursive'],
       
     },
     extend: {},
   },
   plugins: [],
+  
 }

@@ -12,6 +12,9 @@ import Profile from './Components/Profile'
 import Add from './Components/Add'
 import Top from './Components/Top'
 import Map from './Components/Map'
+import Edit from './Components/Edit'
+import Settings from './Components/Settings'
+import UserEdit from './Components/UserEdit'
 
 
 function App() {
@@ -29,7 +32,9 @@ function App() {
            <Route path='/Add' element={<Add/>}/>
            <Route path='/Top' element={<Top/>}/>
            <Route path='/Map' element={<Map/>}/>
-
+           <Route path='/edit/:id' element={<Edit/>}/>
+           <Route path='/settings' element={<Settings/>}/>
+           <Route path='/useredit' element={<UserEdit/>}/>
     </Routes>
   )
 }

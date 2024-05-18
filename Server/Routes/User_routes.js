@@ -34,6 +34,20 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.get("/:username", async (req, res) => {
+    try {
+        const username = req.params.username;
+        const user = await userModel.findOne({ UserName: username });
+        if (!user) {
+            return res.status(404).send("User not found");
+        }
+        res.json(user);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("An error occurred");
+    }
+});
+
 
 router.post("/signin", async (req, res) => {
     try {
@@ -84,15 +98,33 @@ router.post('/signup', async (req, res) => {
 });
 
 
-router.put("/:id", async (req, res) => {
+// router.put("/:id", async (req, res) => {
+//     try {
+//         const userid = req.params.id;
+//         const updatedUser = await userModel.findByIdAndUpdate(userid, req.body, { new: true });
+//         res.json(updatedUser);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// });
+
+router.put("/data/:username", async (req, res) => {
     try {
-        const userid = req.params.id;
-        const updatedUser = await userModel.findByIdAndUpdate(userid, req.body, { new: true });
-        res.json(updatedUser);
+        const username = req.params.username;
+        const updateData = req.body;
+        const user = await userModel.findOneAndUpdate({ UserName: username }, updateData, { new: true });
+        if (!user) {
+            return res.status(404).send("User not found");
+        }
+        res.json(user);
     } catch (error) {
-        console.log(error);
+        console.error(error);
+        res.status(500).send("An error occurred");
     }
 });
+
+
+
 
 router.delete("/:id", async (req, res) => {
     try {

@@ -80,10 +80,10 @@ function Mainpg() {
 
         <div className=' w-4/5 ' >
           <nav className=' flex justify-around text-center   items-center'>
-            <input type="text" placeholder='Search ' className='border-[2px] mt-3 border-yellow-400 rounded-lg pl-2 w-[30rem] h-10' />
+            <input type="text" placeholder='Search ' className='border-[2px] mt-3 mb-3 border-yellow-400 rounded-lg pl-2 w-[30rem] h-10' />
             <Link to='/Profile'>
               <div className=' w-[9rem] h-9 bg-yellow-400  rounded-lg  flex justify-center text-center cursor-pointer items-center ' ><img className='h-7 w-10 pl-3' src={user} alt="" /><h5 className=' text-white '>{username}</h5></div>
-              {/* onClick={LogOut} */}
+            
             </Link>
            
             <div className='w-14 h-7 bg-yellow-400  rounded-full  '><div className='bg-white w-6 h-6 rounded-full border ml-0.5 mt-0.5'></div></div>
